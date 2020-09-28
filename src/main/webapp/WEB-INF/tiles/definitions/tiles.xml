@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/WEB-INF/tiles/template/template.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/template/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/template/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+	</definition>
+	
+	<definition name="base.definition2" template="/WEB-INF/views/login.jsp">
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+	
+	<!-- Login Page -->
+	<definition name="login" extends="base.definition2">
+		<put-attribute name="title" value="Login Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute>
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="addDBConnection" extends="base-definition">
+		<put-attribute name="title" value="Database Connection Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addDBConnection.jsp" />
+	</definition>
+	
+	<definition name="manualDbConList" extends="base-definition">
+		<put-attribute name="title" value="Manual Backup Database Connction List" />
+		<put-attribute name="body" value="/WEB-INF/views/manualDbConList.jsp" />
+	</definition>	
+	
+	<definition name="backupHistory" extends="base-definition">
+		<put-attribute name="title" value="Backup History" />
+		<put-attribute name="body" value="/WEB-INF/views/backupHistory.jsp" />
+	</definition>
+	
+	<definition name="manualDbBackupList" extends="base-definition">
+		<put-attribute name="title" value="Manual Backup Form" />
+		<put-attribute name="body" value="/WEB-INF/views/manualDbBackupList.jsp" />
+	</definition>
+	
+</tiles-definitions>
